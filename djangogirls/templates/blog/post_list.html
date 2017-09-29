@@ -13,7 +13,7 @@
 
     {% for post in posts %}
     <div>{{ post.title }}</div>
-    <div>{{ post.content}}</div>
+    <div>{{ post.content|truncatewords:10 }}</div>
     <div>-----------------</div>
     {% endfor %}
 </body>

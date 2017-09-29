@@ -5,6 +5,8 @@ from blog.models import Post
 
 def post_list(request):
     posts = Post.objects.all()
+    # posts = Post.objects.filter(published_date__isnull=False)
+
     context = {
         'posts': posts,
     }
